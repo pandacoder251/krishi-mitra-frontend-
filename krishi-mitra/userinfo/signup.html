@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sign Up | Krishi Mitra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../userinfo/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Logo -->
+    <a href="../index/index.html" class="logo">
+      <img src="../assets/logo.jpg" alt="Krishi Mitra Logo" class="logo-img">
+      <span class="logo-text">
+        <span class="krishi">Krishi</span>
+        <span class="mitra">Mitra</span>
+      </span>
+    </a>
+
+    <!-- Heading -->
+    <h2 class="form-title">Register</h2>
+
+    <!-- Registration Form -->
+    <form action="#" method="post" class="form">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+
+      <!-- Email / Mobile with OTP -->
+        <input type="text" id="emailPhone" name="email" placeholder="Email or Mobile " />
+        
+
+      <!-- Other Credentials -->
+     <input type="password" name="password" placeholder="Password" required />
+      <input type="password" name="confirm_password" placeholder="Confirm Password" required />
+      <input type="text" name="location" placeholder="Location" required />
+      <input type="text" name="pincode" placeholder="Pincode" required />
+
+      <!-- Terms -->
+      <div class="terms">
+        <input type="checkbox" id="terms" name="terms" required />
+        <label for="terms">
+          I agree to the <a href="termsandconditions.html" target="_blank">Terms and Conditions</a>
+        </label>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn">Register</button>
+    </form>
+
+    <!-- Redirect -->
+    <p class="redirect">Already have an account? <a href="../userinfo/signin.html">Sign In</a></p>
+    <div class="back-home"><a href="../index/index.html">&larr; Back to Home</a></div>
+  </div>
+
+  <script src="signup.js"></script>
+</body>
+</html>
