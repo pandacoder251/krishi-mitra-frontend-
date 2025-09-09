@@ -631,7 +631,6 @@ li a:hover {
 
 .footer-link {
   font-size: 0.9rem;
-  text-transform: capitalize;
   font-weight: 500;
   color: var(--light-black);
   line-height: 2.25rem;
@@ -647,13 +646,14 @@ li a:hover {
   justify-content: center;
 }
 
-.footer .krishi,
+.logo-text .krishi,
 .mitra {
-
+text-transform: none;
   line-height: 1.75rem;
   color: var(--black);
   justify-content: center;
 }
+
 
 
 .detail {
