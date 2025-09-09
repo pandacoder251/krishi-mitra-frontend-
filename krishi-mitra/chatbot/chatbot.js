@@ -27,3 +27,12 @@ userInput.addEventListener('keydown', (e) => {
     sendBtn.click();
   }
 });
+
+// Back button functionality
+const backBtn = document.getElementById('back-btn');
+
+if (backBtn) {
+  backBtn.addEventListener('click', () => {
+    history.back();
+  });
+}
