@@ -29,26 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-// Language Change Handler
-
-  function handleLanguageChange(selectElement) {
-    const selectedLang = selectElement.options[selectElement.selectedIndex].text;
-    alert(`Your language has been changed to: ${selectedLang}`);
-  }
-
-
-  const desktopLang = document.getElementById('language-toggle');
-  const mobileLang = document.getElementById('language-toggle-mobile');
-
-  desktopLang?.addEventListener('change', function () {
-    handleLanguageChange(this);
-  });
-
-  mobileLang?.addEventListener('change', function () {
-    handleLanguageChange(this);
-  });
-
-
 // Chat Bubble Click
 
   const chatToggle = document.getElementById('chat-toggle');

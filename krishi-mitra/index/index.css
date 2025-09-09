@@ -671,38 +671,45 @@ li a:hover {
   font-size: 0.9rem;
 }
 
-/* ================= Responsive ================= */
-@media (max-width: 992px) {
-  .container {
-    max-width: 90%;
-  }
 
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-
-  .card-container .card:not(:last-child) {
-    border-right: none;
-  }
-
-  .about-text {
-    flex: 1 1 100%;
-    text-align: center;
-    padding: 1rem;
-  }
-
-  .newsletter-section .container {
-    flex-direction: column;
-    text-align: center;
-
-  }
-
-  .newsletter-media img {
-    max-width: 300px;
-    margin: 0 auto;
-  }
+/* ================= Chat Bubble ================= */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 
+.chat-toggle {
+  background: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: float 2s ease-in-out infinite;
+  z-index: 100;
+}
+
+.chat-toggle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.chat-toggle:hover {
+  transform: scale(1.1);
+  animation-play-state: paused;
+}
+
+
+
+/* ================= Responsive ================= */
 
 @media (max-width: 768px) {
   .navlist {

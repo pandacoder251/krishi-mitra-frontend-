@@ -22,3 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// Chat Bubble Click
+
+const chatToggle = document.getElementById('chat-toggle');
+
+chatToggle?.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.open('/chatbot/chatbot.html', '_blank');
+});
