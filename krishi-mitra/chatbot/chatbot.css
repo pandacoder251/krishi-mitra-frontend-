@@ -21,7 +21,7 @@
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
-  background: linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),url("https://live.staticflickr.com/4437/36289604920_7f9df62d45_b.jpg") ;
+  background: linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),url("https://live.staticflickr.com/4437/36289604920_7f9df62d45_b.jpg") center/cover no-repeat fixed;
   transition: background 0.3s, color 0.3s;
 }
 
@@ -231,4 +231,5 @@ header {
     padding: 8px 12px;
   }
 }
+
 
