@@ -1,0 +1,274 @@
+/* ===== Import Fonts ===== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    color: #333;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)), url("https://tse1.mm.bing.net/th/id/OIP.xKOtFST5pDGcLrAqaJIF1AHaE8?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat fixed;
+}
+
+/* =================== NAVBAR =================== */
+
+header {
+    background: rgba(44, 47, 49, 0.85);
+    color: #fff;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* Hamburger */
+.hamburger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+/* Animate hamburger into X */
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Dropdown Menu */
+.menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #fff;
+    padding: 1.2rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.menu.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu li a:hover {
+    color: #2e7d32;
+    font-weight: 650;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== Main Container ===== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 1.5rem;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.644);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    max-width: 750px;
+    width: 100%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.weather-container h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.weather-container .subtitle {
+    font-size: 1.1rem;
+    color: var(--subtext-color);
+    margin-bottom: 2rem;
+}
+
+/* ===== Date Picker ===== */
+.date-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.date-picker label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.date-picker input {
+    padding: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #3e3e3e;
+    backdrop-filter: blur(6px);
+    transition: all 0.3s ease;
+}
+
+.date-picker input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+}
+
+/* ===== Weather Display ===== */
+.weather-display {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.weather-display h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.weather-display p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.weather-display ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.weather-display ul li {
+    margin-bottom: 0.4rem;
+}
+
+a {
+    text-decoration: none;
+    margin-bottom: 0.4rem;
+    color: #222;
+    font-weight: 500;
+}
+
+a:hover {
+    color: red;
+    font-weight: 550;
+    transition: .1s ease-out;
+}
+
+
+/* ===== Buttons ===== */
+.btn {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: .9rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: #ff4d4d;
+    transition: all 0.4s ease;
+}
+
+
+/* ===== Responsive ===== */
+
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 2rem 1rem;
+    }
+
+    .weather-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .date-picker input,
+    .btn,
+    .weather-display textarea {
+        width: 100%;
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+}

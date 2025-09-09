@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Help</title>
+    <link rel="stylesheet" href="gethelp.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <h1>Get Help</h1>
+            <div class="btn-wrapper">
+                <a href="../insider/welcome.html" class="back-btn">Back</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="intro">Find answers to common questions about farming, weather, and fertilizers.</p>
+
+            <label for="faq-search" class="visually-hidden"></label>
+            <input type="text" id="faq-search" placeholder="Search FAQs...">
+
+            <!-- FAQ Items -->
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How accurate are the crop recommendations?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>The crop suggestions are based on scientific data, soil type, and local weather. They are
+                        reliable, but actual results may also depend on farming practices and natural conditions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How often should I water my crops?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>Watering frequency depends on crop type and soil, but generally 2-3 times per week is
+                        recommended.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    In which languages is the app available?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>The app supports multiple Indian languages for easy use.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    Is my farm data safe in the app?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>Yes, all data is secure and not shared without permission.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    What is the recommended pH for soil?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>Most crops grow best in soil with a pH between 6.0 and 7.5.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                    How do I know when my crops need fertilization?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer" aria-hidden="true">
+                    <p>Yellowing leaves, stunted growth, or poor yield can indicate nutrient deficiency. Conduct a soil
+                        test for accuracy.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- JS for FAQ toggle & search -->
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        const searchInput = document.getElementById('faq-search');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                answer.classList.toggle('open');
+
+                // Accessibility
+                const expanded = question.classList.contains('active');
+                question.setAttribute('aria-expanded', expanded);
+                answer.setAttribute('aria-hidden', !expanded);
+            });
+        });
+
+        // Search filter
+        searchInput.addEventListener('input', () => {
+            const term = searchInput.value.toLowerCase();
+            faqQuestions.forEach(q => {
+                const item = q.parentElement;
+                const text = q.textContent.toLowerCase();
+                item.style.display = text.includes(term) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+
+</html>

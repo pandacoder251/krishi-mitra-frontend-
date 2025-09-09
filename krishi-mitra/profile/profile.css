@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ================= Global Reset ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),url("https://tse1.mm.bing.net/th/id/OIP.xKOtFST5pDGcLrAqaJIF1AHaE8?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat fixed;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  backdrop-filter: blur(2px);
+}
+
+/* ================= Header ================= */
+header {
+  background: rgba(44, 47, 49, 0.85);
+  color: #fff;
+  padding: 1rem 2rem;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.back-btn {
+  color: #f8faf8;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.back-btn:hover {
+  color: #ff4d4d;
+}
+
+/* ================= Main Profile Container ================= */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1.5rem;
+}
+
+.profile-container {
+  background: rgba(255, 255, 255, 0.644);
+  backdrop-filter: blur(12px);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container h2 {
+  font-size: 2.2rem;
+  color: #2a2929;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.profile-container .subtitle {
+  font-size: 1.1rem;
+  color: #454343;
+  margin-bottom: 2rem;
+}
+
+/* ================= Profile Picture ================= */
+.profile-pic {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-pic img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= Form Fields ================= */
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.profile-form div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-form label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #262525;
+}
+
+.profile-form input {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #3e3e3e;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.profile-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.profile-form input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.profile-pic {
+  flex-direction: column;
+}
+
+.info-grid {
+  flex-direction: column;
+}
+
+.phone-group,
+.otp-group {
+  flex-direction: column;
+}
+
+
+/* ================= Phone OTP ================= */
+.phone-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.phone-group input {
+  width: 300px;
+  /* desktop width */
+  min-width: 200px;
+  padding: 0.9rem;
+  border-radius: 12px;
+}
+
+.phone-group .btn {
+  width: 120px;
+  padding: 0.9rem;
+  border-radius: 12px;
+}
+
+/* OTP field */
+.otp-group {
+  display: none;
+  margin-top: 0.5rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.otp-group input {
+  flex: 1;
+}
+
+/* ================= Buttons ================= */
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: .9rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  background: #ff4d4d;
+  transition: all 0.4s ease;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ================= Change Password Section ================= */
+.change-password-section {
+  background: rgba(255, 255, 255, 0.644);
+  backdrop-filter: blur(12px);
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  max-width: 750px;
+  width: 100%;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.change-password-section h3 {
+  font-size: 2.2rem;
+  color: #2a2929;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.change-password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.change-password-form label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #2a2929;
+}
+
+.change-password-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #2a2929;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.change-password-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.change-password-form input:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 10px rgba(46, 125, 50, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.change-password-btn {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: .9rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.change-password-btn:hover {
+  background: #ff4d4d;
+  transition: all 0.4s ease;
+}
+
+/* ================= Responsive ================= */
+
+
+@media (max-width: 480px) {
+  .phone-group input {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .phone-group .btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}

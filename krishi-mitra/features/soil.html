@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Know Your Soil</title>
+  <link rel="stylesheet" href="feature.css" />
+</head>
+
+<body>
+
+  <!-- ================= Navbar ================= -->
+<header>
+  <nav class="navbar flex">
+    <h1>Know Your Soil</h1>
+
+    <!-- Hamburger Icon -->
+    <div id="menu-btn" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Menu (always toggled by hamburger) -->
+    <ul id="mobile-menu" class="menu">
+      <li><a href="crop.html" class="link">Crop Recommendation</a></li>
+      <li><a href="fertilizer.html" class="link">Fertilizer Recommendation</a></li>
+      <li><a href="weather.html" class="link">Weather Report</a></li>
+      <li><a href="../insider/welcome.html" class="link">Back</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- ================= Main Content ================= -->
+  <main>
+    <section class="soil-section">
+      <div class="container">
+        <h2>Want to know more about your soil?</h2>
+
+        <!-- Yes/No Buttons -->
+        <div class="options">
+          <a href="#" class="btn">Yes</a>
+          <a href="#" class="btn">No</a>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="tips">
+          <h3>How to Get Started</h3>
+          <ul>
+            <li>Switch on your location to allow soil data analysis.</li>
+            <li>Check important soil details like <strong>pH</strong>, <strong>nitrogen</strong>, and
+              <strong>PPM</strong>.</li>
+            <li>Use the <strong>Crop Recommendation</strong> feature to know which crops suit your soil best.</li>
+            <li>Explore the <strong>Fertilizer Recommendation</strong> feature for improving soil health and
+              productivity.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+
+<script>
+  const menuBtn = document.getElementById("menu-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  menuBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    menuBtn.classList.toggle("open");
+  });
+</script>
+
+</html>

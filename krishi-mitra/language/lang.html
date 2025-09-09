@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Language</title>
+  <link rel="stylesheet" href="lang.css">
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav class="navbar">
+      <h1>Choose Your Language</h1>
+      <div class="btn-wrapper">
+        <a href="../insider/welcome.html" class="back-btn">Back</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <section class="language-container">
+      <p class="subtitle">Select your preferred language to continue:</p>
+      
+      <!-- Custom Dropdown -->
+      <div class="form-group">
+        <label for="language">Preferred Language</label>
+        <div class="custom-dropdown" id="language-dropdown">
+          <div class="dropdown-selected">-- Select Language --</div>
+          <ul class="dropdown-list">
+            <li data-value="as">Assamese</li>
+            <li data-value="bn">Bengali</li>
+            <li data-value="br">Bodo</li>
+            <li data-value="dg">Dogri</li>
+            <li data-value="en">English</li>
+            <li data-value="gu">Gujarati</li>
+            <li data-value="hi">Hindi</li>
+            <li data-value="kn">Kannada</li>
+            <li data-value="ks">Kashmiri</li>
+            <li data-value="kok">Konkani</li>
+            <li data-value="mai">Maithili</li>
+            <li data-value="ml">Malayalam</li>
+            <li data-value="mr">Marathi</li>
+            <li data-value="ne">Nepali</li>
+            <li data-value="or">Odia</li>
+            <li data-value="pa">Punjabi</li>
+            <li data-value="sa">Sanskrit</li>
+            <li data-value="sd">Sindhi</li>
+            <li data-value="ta">Tamil</li>
+            <li data-value="te">Telugu</li>
+            <li data-value="ur">Urdu</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Apply Button -->
+      <div class="redirect">
+        <button id="apply-lang" class="apply-lang">Apply</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="lang.js"></script>
+</body>
+
+</html>

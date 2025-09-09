@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Recommendation</title>
+  <link rel="stylesheet" href="crop.css">
+</head>
+<body>
+
+  <!-- ================= Navbar ================= -->
+  <header>
+    <nav class="navbar flex">
+      <h1>Fertilizer Recommendation</h1>
+
+      <!-- Hamburger Icon -->
+      <div id="menu-btn" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu -->
+      <ul id="mobile-menu" class="menu">
+        <li><a href="soil.html" class="link">Know Your Soil</a></li>
+        <li><a href="crop.html" class="link">Crop Recommendation</a></li>
+        <li><a href="weather.html" class="link">Weather Report</a></li>
+        <li><a href="../insider/welcome.html" class="link">Back</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <!-- ================= Main Content ================= -->
+<main>
+  <section class="container">
+    <h2>Want to know which fertilizer you should use?</h2>
+    <form class="recommend-form grid-form">
+
+      <!-- Crop Type -->
+      <div class="form-group ">
+        <label for="crop-type">Crop Name</label>
+        <input type="name" id="crop-name" name="crop-name" placeholder="Potato">
+      </div>
+
+      <!-- Soil Inputs -->
+      <div class="form-group">
+        <label for="ph">Soil pH</label>
+        <input type="number" step="0.01" id="ph" name="ph" placeholder="Enter pH value">
+      </div>
+
+      <div class="form-group">
+        <label for="phosphorous">Phosphorous</label>
+        <input type="number" id="phosphorous" name="phosphorous" placeholder="Enter Phosphorous level">
+      </div>
+
+      <div class="form-group">
+        <label for="nitrogen">Nitrogen Level</label>
+        <input type="number" id="nitrogen" name="nitrogen" placeholder="Enter Nitrogen level">
+      </div>
+
+      <!-- Weather Inputs -->
+      <div class="form-group">
+        <label for="humidity">Humidity (%)</label>
+        <input type="number" id="humidity" name="humidity" placeholder="Enter humidity %">
+      </div>
+
+      <div class="form-group">
+        <label for="temperature">Temperature (°C)</label>
+        <input type="number" id="temperature" name="temperature" placeholder="Enter temperature">
+      </div>
+    </form>
+      <!-- Submit -->
+      <div class="form-actions full-width">
+        <button type="submit" class="btn">Confirm</button>
+      </div>
+  </section>
+</main>
+
+  <!-- ================= Script ================= -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      menuBtn.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>

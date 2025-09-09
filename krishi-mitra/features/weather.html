@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Report Journal</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+
+  <!-- ================= Navbar ================= -->
+  <header>
+    <nav class="navbar flex">
+      <h1>Weather Report</h1>
+
+      <!-- Hamburger Icon -->
+      <div id="menu-btn" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Menu -->
+      <ul id="mobile-menu" class="menu">
+        <li><a href="soil.html" class="link">Know Your Soil</a></li>
+        <li><a href="crop.html" class="link">Crop Recommendation</a></li>
+        <li><a href="fertilizer.html" class="link">Fertilizer Recommendation</a></li>
+        <li><a href="../insider/welcome.html" class="link">Back</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <section class="weather-container">
+      <h2>Select a Date</h2>
+      <p class="subtitle">Check the weather report by choosing a date below:</p>
+
+      <!-- Date Picker -->
+      <div class="date-picker">
+        <label for="date">Choose Date</label>
+        <input type="date" id="date" name="date">
+        <button class="btn">Show Weather</button>
+      </div>
+
+      <!-- Weather Display -->
+      <div class="weather-display">
+        <h3 id="weather-date">No Date Selected</h3>
+        <p id="weather-status">☁️ Weather details will appear here</p>
+        <ul>
+          <li> Temperature: -- °C</li>
+          <li>Humidity: -- %</li>
+          <li> Wind: -- km/h</li>
+          <li>Soil Report: <a href="soil.html"> Check</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+<script src="weather.js"></script>
+
+</html>
