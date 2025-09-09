@@ -10,7 +10,7 @@
 }
 
 body {
-  background: linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),url("../assets/wheat.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),url("../assets/wheat.jpg") center/cover no-repeat fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -151,3 +151,4 @@ main {
   padding: 1.5rem 1rem;
   font-size: 0.95rem;
 }
+
