@@ -7,15 +7,13 @@
 }
 
 body {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
-  color: #333;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),
-    url("https://tse1.mm.bing.net/th/id/OIP.xKOtFST5pDGcLrAqaJIF1AHaE8?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat fixed;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    color: #333;
+    background: #d7e6be center/cover no-repeat fixed;
 }
 
 /* =================== NAVBAR =================== */
@@ -190,4 +188,69 @@ main {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   color: #444;
+
+}
+
+/* ======================= Media Query: Mobile ======================= */
+@media (max-width: 480px) {
+
+    /* Header & Navbar */
+    header {
+        padding: 0.8rem 1rem;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+        padding: 6px 10px;
+        justify-content: space-between;
+    }
+
+    .navbar h1 {
+        font-size: 1.2rem;
+    }
+
+    /* Hamburger menu size tweak */
+    .hamburger span {
+        width: 22px;
+        height: 2.5px;
+    }
+
+    /* Dropdown Menu */
+    .menu {
+        top: 60px;
+        right: 10px;
+        padding: 1rem 1.5rem;
+    }
+
+    /* Main Container */
+    main {
+        padding: 2rem 1rem;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .container h2 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Form Grid: switch to single column */
+    .grid-form {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .full-width {
+        grid-column: span 1;
+    }
+
+    /* Button full width for mobile */
+    .btn {
+        width: 100%;
+        padding: 0.7rem;
+        font-size: 0.95rem;
+    }
 }
