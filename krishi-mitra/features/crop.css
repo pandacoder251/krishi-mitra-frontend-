@@ -7,16 +7,16 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 body {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
-  color: #333;
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.061), rgba(255, 255, 255, 0.247)),
-    url("https://tse1.mm.bing.net/th/id/OIP.xKOtFST5pDGcLrAqaJIF1AHaE8?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3") center/cover no-repeat fixed;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    color: #333;
+    background:
+        #d7e6be center/cover no-repeat fixed;
 }
 
 
@@ -194,7 +194,7 @@ main {
     color: #888;
     font-weight: 400;
     opacity: 1;
-   
+
 }
 
 
@@ -223,6 +223,12 @@ main {
     /* Header & Navbar */
     header {
         padding: 0.8rem 1rem;
+    }
+
+    .navbar {
+        justify-content: flex-start;
+        padding: 6px 10px;
+        justify-content: space-between;
     }
 
     .navbar h1 {
