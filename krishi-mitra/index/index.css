@@ -611,7 +611,7 @@ li a:hover {
 
 .subscribe-btn:hover {
   background-color: var(--clr4);
-  color: var(--clr5);
+  color: var(--white);
 }
 
 /* ================= Footer ================= */
@@ -785,3 +785,4 @@ text-transform: none;
     background-size: cover;
   }
 }
+
