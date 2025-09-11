@@ -25,7 +25,7 @@ html {
 
 /* ================= Body & Layout ================= */
 body {
-  background: url("https://live.staticflickr.com/4067/4373267377_6db41f3e3c_b.jpg") center/cover no-repeat fixed;
+  background: #d7e6be center/cover no-repeat fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +35,7 @@ body {
 
 /* ================= Form Container ================= */
 .form-container {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.484);
   backdrop-filter: blur(12px);
   padding: 2rem 2.5rem;
   border-radius: 20px;
@@ -45,11 +45,6 @@ body {
   text-align: center;
   margin: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* ================= Logo ================= */
@@ -66,7 +61,7 @@ body {
   width: 36px;
   height: 36px;
   backdrop-filter: blur(12px);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .logo-text {
