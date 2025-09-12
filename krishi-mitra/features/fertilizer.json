@@ -1,0 +1,13 @@
+{
+    "N": 90,
+    "P": 80,
+    "K": 90,
+    "temperature": 25,
+    "humidity": 80,
+    "ph": 8.5,
+    "rainfall": 200,
+    "moisture": 0.7,
+    "carbon": 1.2,
+    "soil": "Loamy Soil",
+    "crop_input": "rice"
+}
